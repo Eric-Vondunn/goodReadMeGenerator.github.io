@@ -89,29 +89,29 @@ async function main(){
 
     //final read me output 
         let readMeOutPut = (`
-# ${projectTittle} 
-${projectDescription}
+# ${projectTitle} 
+${projectDesc}
 \n* [Installation](#Installation)
 \n* [Instructions](#Instructions)
 \n* [License](#License)
 \n* [Author](#Author)
 \n* [Tests](#Tests)
 ## Installation
-${installationProcess}
+${installSteps}
 ## Instructions
-${instruction}
+${userInstruction}
 \`\`\`
-${instructionExample}
+${userInstructionExamples}
 \`\`\`
 ## License 
 This project is licensed under the ${projectlicense} - see the ${projectLicenseUrl} file for details
 ## Tests
-${tests}
+${testExamples}
 ## Author 
-\n**${gitName}**
-\nEmail: ${gitEmail}
-\nLocation:${gitlocation}
-\nGitHub: ${gitUrl}
+\n**${gitHubName}**
+\nEmail: ${gitHubEmail}
+\nLocation:${gitHublocation}
+\nGitHub: ${gitHubUrl}
 `)
 
 let writeResult = fs.writeFileSync(path.join(__dirname, '../GoodReadMeGenerator', 'readMe.md'), readMeOutPut )

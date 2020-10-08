@@ -73,16 +73,16 @@ async function main(){
         let installSteps = questionsForUserInput.installSteps;
         let userInstruction = questionsForUserInput.userInstruction;
         let userInstructionExamples = questionsForUserInput.userInstructionExamples;
-        let projectLicense = questionsForUserInput.licenseName;
-        let projectLicenseUrl = questionsForUserInput.licenseUrl;
+        let projectLicense = questionsForUserInput.projectLicense;
+        let projectLicenseUrl = questionsForUserInput.projectLicenseUrl;
         let testExamples = questionsForUserInput.testExamples;
             
 
         let gitHubResponse = await axios.get(`https://api.github.com/users/${userName}`);
         let gitHubData = gitHubResponse.data;
-        let gitHubName = gitData.login;
-        let gitHubEmail = gitData.email;
-        let gitHubUrl = gitData.html_url;
+        let gitHubName = gitHubData.login;
+        let gitHubEmail = gitHubData.email;
+        let gitHubUrl = gitHubData.html_url;
         
 
 
@@ -103,7 +103,7 @@ ${userInstruction}
 ${userInstructionExamples}
 \`\`\`
 ## License 
-This project is licensed under ${projectlicense} - URL ${projectLicenseUrl}
+This project is licensed under ${projectLicense} - URL ${projectLicenseUrl}
 ## Tests
 ${testExamples}
 ## Author 

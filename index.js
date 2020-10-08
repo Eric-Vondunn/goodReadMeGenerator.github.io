@@ -1,10 +1,10 @@
 
 
 // initial variables
-let axios = require("axios");
-let path = require('path');
-let inquirer = require("inquirer");
-let fs = require('fs');
+const axios = require("axios");
+const path = require('path');
+const inquirer = require("inquirer");
+const fs = require('fs');
 
 
 //asynchronous function
@@ -82,7 +82,6 @@ async function main(){
         let gitHubData = gitResponse.data;
         let gitHubName = gitData.login;
         let gitHubEmail = gitData.email;
-        let gitHublocation = gitData.location;
         let gitHubUrl = gitData.html_url;
         
 
@@ -104,13 +103,12 @@ ${userInstruction}
 ${userInstructionExamples}
 \`\`\`
 ## License 
-This project is licensed under the ${projectlicense} - see the ${projectLicenseUrl} file for details
+This project is licensed under ${projectlicense} - URL ${projectLicenseUrl}
 ## Tests
 ${testExamples}
 ## Author 
 \n**${gitHubName}**
 \nEmail: ${gitHubEmail}
-\nLocation:${gitHublocation}
 \nGitHub: ${gitHubUrl}
 `)
 

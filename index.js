@@ -112,7 +112,7 @@ ${testExamples}
 \nGitHub: ${gitHubUrl}
 `)
 
-let writeResult = fs.writeFileSync(path.join(__dirname, '../GoodReadMeGenerator', 'readMe.md'), readMeOutPut )
+let writeResult = fs.writeFileSync(path.join(__dirname, '../goodReadMeGenerator.github.io', 'readMe.md'), readMeOutPut )
 console.log("Complete!")
     }
 main();

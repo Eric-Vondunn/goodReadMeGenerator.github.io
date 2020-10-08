@@ -66,20 +66,20 @@ async function main(){
 
 
         console.log(`Generating`);
-        console.log(userResponse);
-        let userName = userResponse.userName;
-        let projectTitle = userResponse.projectTitle;
-        let projectDesc = userResponse.projectDesc;
-        let installSteps = userResponse.installSteps;
-        let userInstruction = userResponse.userInstruction;
-        let userInstructionExamples = userResponse.userInstructionExamples;
-        let projectLicense = userResponse.licenseName;
-        let projectLicenseUrl = userResponse.licenseUrl;
-        let testExamples = userResponse.testExamples;
+        console.log(questionsForUserInput);
+        let userName = questionsForUserInput.userName;
+        let projectTitle = questionsForUserInput.projectTitle;
+        let projectDesc = questionsForUserInput.projectDesc;
+        let installSteps = questionsForUserInput.installSteps;
+        let userInstruction = questionsForUserInput.userInstruction;
+        let userInstructionExamples = questionsForUserInput.userInstructionExamples;
+        let projectLicense = questionsForUserInput.licenseName;
+        let projectLicenseUrl = questionsForUserInput.licenseUrl;
+        let testExamples = questionsForUserInput.testExamples;
             
 
         let gitHubResponse = await axios.get(`https://api.github.com/users/${userName}`);
-        let gitHubData = gitResponse.data;
+        let gitHubData = gitHubResponse.data;
         let gitHubName = gitData.login;
         let gitHubEmail = gitData.email;
         let gitHubUrl = gitData.html_url;
